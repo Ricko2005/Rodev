@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio | [Votre Nom]</title>
+    <!-- Fonts -->
+     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700;900&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+    <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css">
+    <!-- JS -->
+    <script src="js/three.min.js" defer></script>
+    <script src="js/vanilla-tilt.min.js" defer></script>
+    <script src="js/app.js" defer></script>
+</head>
+<body>
+    <!-- Curseur personnalisé -->
+    <div class="custom-cursor"></div>
+
+    <!-- Loader -->
+    <div class="loader">
+        <div class="loader-content">
+            <div class="loader-spinner"></div>
+            <div class="loader-text">Chargement...</div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <a href="#" class="logo" data-text="Portfolio">RoDev</a>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+            <ul class="nav-links">
+                <li><a href="#home" class="nav-link active">Accueil</a></li>
+                <li><a href="#about" class="nav-link">À propos</a></li>
+                <li><a href="#projects" class="nav-link">Projets</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+                <li><button class="theme-toggle"><i class="fas fa-moon"></i></button></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <canvas id="canvas3d"></canvas>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="line"><span class="word"></span></span>
+                <span class="line"><span class="word">Je suis</span> <span class="word highlight">Romaric TOLOFON</span></span>
+                <span class="line"><span class="word">Développeur</span> <span class="word">Créatif</span></span>
+            </h1>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn-magnetic">
+                    <span class="btn-text">Voir mes projets</span>
+                    <span class="btn-overlay"></span>
+                </a>
+                <a href="#contact" class="btn-outline-magnetic">
+                    <span class="btn-text">Me contacter</span>
+                    <span class="btn-overlay"></span>
+                </a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-text="À propos">À propos</h2>
+                <div class="section-subtitle">Qui suis-je ?</div>
+            </div>
+            <div class="about-content">
+                <div class="about-image">
+                    <div class="image-wrapper">
+                        <img src="images/jeannot.jpg" alt="[Votre Nom]">
+                        <div class="image-border"></div>
+                    </div>
+                </div>
+                <div class="about-text">
+                    <h3>Un passionné de design et technologie</h3>
+                    <p>Je suis un développeur full-stack avec une spécialisation en création d'interfaces utilisateur modernes et interactives. Mon objectif est de créer des expériences digitales mémorables qui allient performance et esthétique.</p>
+                    
+                    <div class="skills">
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Développement Frontend</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="95%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Design UI/UX</span>
+                                <span>85%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="85%"></div>
+                            </div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-info">
+                                <span>Animation Web</span>
+                                <span>90%</span>
+                            </div>
+                            <div class="skill-bar">
+                                <div class="skill-progress" data-width="90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <a href="#" class="btn-magnetic">
+                        <span class="btn-text">Télécharger mon CV</span>
+                        <span class="btn-overlay"></span>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-text="Projets">Projets</h2>
+                <div class="section-subtitle">Mes réalisations récentes</div>
+            </div>
+            
+            <div class="projects-grid">
+                <!-- Projet 1 -->
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="images/tulipe.png" alt="Projet 1">
+                        <div class="project-overlay">
+                            <h3>Application Web Moderne</h3>
+                            <p>React, Node.js, Three.js</p>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 2 -->
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/800x500" alt="Projet 2">
+                        <div class="project-overlay">
+                            <h3>Plateforme E-commerce</h3>
+                            <p>Vue.js, Laravel, GSAP</p>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 3 -->
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/800x500" alt="Projet 3">
+                        <div class="project-overlay">
+                            <h3>Site Vitrine Animé</h3>
+                            <p>HTML/CSS, JavaScript, ScrollTrigger</p>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Projet 4 -->
+                <div class="project-card" data-tilt>
+                    <div class="project-image">
+                        <img src="https://via.placeholder.com/800x500" alt="Projet 4">
+                        <div class="project-overlay">
+                            <h3>Application Mobile</h3>
+                            <p>React Native, Firebase</p>
+                            <a href="#" class="project-link">
+                                <i class="fas fa-arrow-right"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="projects-more">
+                <a href="#" class="btn-magnetic">
+                    <span class="btn-text">Voir plus de projets</span>
+                    <span class="btn-overlay"></span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title" data-text="Contact">Contact</h2>
+                <div class="section-subtitle">Travaillons ensemble</div>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3>Disponible pour de nouvelles opportunités</h3>
+                    <p>Si vous avez un projet en tête ou souhaitez discuter d'une collaboration, n'hésitez pas à me contacter.</p>
+                    
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span>Email</span>
+                                <a href="mailto:contact@example.com">contact@example.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span>Téléphone</span>
+                                <a href="tel:+1234567890">+1 (234) 567-890</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">
+                                <span>Localisation</span>
+                                <span>Paris, France</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Dribbble">
+                            <i class="fab fa-dribbble"></i>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <form class="contact-form">
+                    <div class="form-group">
+                        <input type="text" id="name" required>
+                        <label for="name">Votre nom</label>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="email" id="email" required>
+                        <label for="email">Votre email</label>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <input type="text" id="subject" required>
+                        <label for="subject">Sujet</label>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <textarea id="message" required></textarea>
+                        <label for="message">Votre message</label>
+                        <div class="underline"></div>
+                    </div>
+                    
+                    <button type="submit" class="btn-magnetic">
+                        <span class="btn-text">Envoyer le message</span>
+                        <span class="btn-overlay"></span>
+                    </button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <a href="#" class="logo" data-text="Portfolio">Portfolio</a>
+                </div>
+                
+                <div class="footer-links">
+                    <ul>
+                        <li><a href="#home">Accueil</a></li>
+                        <li><a href="#about">À propos</a></li>
+                        <li><a href="#projects">Projets</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-social">
+                    <a href="#" aria-label="GitHub"><i class="fab fa-github"></i></a>
+                    <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="Behance"><i class="fab fa-behance"></i></a>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2023 [Votre Nom]. Tous droits réservés.</p>
+                <p>Développé avec <i class="fas fa-heart"></i> et beaucoup de café</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+</body>
+</html>
