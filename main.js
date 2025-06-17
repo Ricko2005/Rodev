@@ -245,3 +245,23 @@ function initThreeJS() {
 
 // Initialize Three.js after DOM is loaded
 document.addEventListener('DOMContentLoaded', initThreeJS);
+// Bouton retour en haut
+const backToTopButton = document.querySelector('.back-to-top');
+
+window.addEventListener('scroll', () => {
+    if (window.pageYOffset > 300) {
+        backToTopButton.classList.add('active');
+    } else {
+        backToTopButton.classList.remove('active');
+    }
+});
+
+// Animation douce
+document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelector(this.getAttribute('href')).scrollIntoView({
+            behavior: 'smooth'
+        });
+    });
+});
