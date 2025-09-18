@@ -71,18 +71,24 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 
-    // Theme Toggle
-    const themeToggle = document.querySelector('.theme-toggle');
-    
-    themeToggle.addEventListener('click', () => {
-        document.body.classList.toggle('light-mode');
-        
-        if (document.body.classList.contains('light-mode')) {
-            themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
-        } else {
-            themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
-        }
-    });
+ // Theme Toggle
+const themeToggle = document.querySelector('.theme-toggle');
+
+// On met le mode clair par défaut
+document.body.classList.add('light-mode');
+themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+
+// Gestion du clic
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
+
+    if (document.body.classList.contains('light-mode')) {
+        themeToggle.innerHTML = '<i class="fas fa-sun"></i>';
+    } else {
+        themeToggle.innerHTML = '<i class="fas fa-moon"></i>';
+    }
+});
+
 
     // Hero Text Animation
     const heroTitle = document.querySelector('.hero-title');
